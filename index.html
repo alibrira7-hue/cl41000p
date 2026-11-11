@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محل مصطفى للأواني بالجملة</title>
+    <!-- تضمين الخط العربي الفاخر Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- تضمين مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-bg: #121212;
+            --card-bg: rgba(26, 26, 26, 0.85);
+            --text-light: #f5f5f5;
+            --text-muted: #b0b0b0;
+            --accent-green: #25d366;
+            --accent-insta: #e1306c;
+            --accent-map: #4285f4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* خلفية بصرية مدمجة ومتناسقة مع صور أواني راقية ومحتشمة بطابع جمالي مريح */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)), 
+                        url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            z-index: -1;
+            filter: blur(4px);
+            transform: scale(1.05);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 24px;
+            padding: 35px 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* قسم الهوية البصرية والشعار */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-gold);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+            margin-bottom: 15px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            max-width: 320px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        /* شريط الصور المصغرة المدمج لإبراز جودة الأواني وراحة العين */
+        .showcase-strip {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .showcase-thumb {
+            width: 31%;
+            height: 75px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .showcase-thumb:hover {
+            transform: scale(1.03);
+            border-color: var(--primary-gold);
+        }
+
+        .showcase-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* روابط التواصل والأزرار التفاعلية الواضحة */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 10%);
+            border-radius: 16px;
+            padding: 14px 18px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-gold);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .link-btn .icon-text {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-btn i {
+            font-size: 1.3rem;
+        }
+
+        /* تخصيص ألوان الأيقونات والأزرار البارزة لراحة وسهولة الاستخدام */
+        .whatsapp-btn i { color: var(--accent-green); }
+        .whatsapp-btn:hover { border-color: var(--accent-green); }
+
+        .insta-btn i { color: var(--accent-insta); }
+        .insta-btn:hover { border-color: var(--accent-insta); }
+
+        .map-btn i { color: var(--accent-map); }
+        .map-btn:hover { border-color: var(--accent-map); }
+
+        .link-btn .arrow-icon {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+        }
+
+        .link-btn:hover .arrow-icon {
+            transform: translateX(-4px);
+            color: var(--text-light);
+        }
+
+        /* تذييل الصفحة */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الخلفية البصرية المدمجة -->
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <!-- معلومات المحل والشعار -->
+        <div class="profile-header">
+            <div class="logo-container">
+                <!-- صورة حقيقية راقية ومحتشمة تعبر عن جودة الأواني المنزلية الفاخرة -->
+                <img src="https://images.unsplash.com/photo-1590736969955-71cc9480175f?auto=format&fit=crop&w=300&q=80" alt="محل مصطفى للأواني">
+            </div>
+            <h1>محل مصطفى للأواني</h1>
+            <div class="subtitle">متخصصون في بيع الأواني بالجملة</div>
+            <p class="bio">أجود أنواع الأواني المنزلية وتجهيزات المطاعم والمحلات بأفضل الأسعار جملة وتفصيلًا.</p>
+        </div>
+
+        <!-- شريط صور مصغرة يدمج جمالية التصميم ويعرض جزءاً من المنتجات لراحة العين -->
+        <div class="showcase-strip">
+            <div class="showcase-thumb">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=200&q=80" alt="أواني منزليّة فخمة">
+            </div>
+            <div class="showcase-thumb">
+                <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=200&q=80" alt="طقم ضيافة راقي">
+            </div>
+            <div class="showcase-thumb">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=200&q=80" alt="مستلزمات مطابخ">
+            </div>
+        </div>
+
+        <!-- الروابط الأساسية (واتساب، إنستغرام، الموقع الجغرافي) بحجم وأزرار واضحة وقابلة للضغط بسلاسة -->
+        <div class="links-container">
+            <!-- زر الواتساب الرئيسي -->
+            <a href="https://wa.me/212668461366" target="_blank" class="link-btn whatsapp-btn">
+                <div class="icon-text">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>تواصل عبر الواتساب</span>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <!-- زر إنستغرام -->
+            <a href="https://www.instagram.com/byktamusstafa?srtk=a2U1M2VxOTF5emNy" target="_blank" class="link-btn insta-btn">
+                <div class="icon-text">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>صفحة إنستغرام</span>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <!-- زر خريطة الموقع -->
+            <a href="https://goo.gl/maps/J54SQEi3ZmichQQu6?g_st=aw" target="_blank" class="link-btn map-btn">
+                <div class="icon-text">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>موقع المحل على الخريطة</span>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-icon"></i>
+            </a>
+        </div>
+
+        <!-- التذييل -->
+        <div class="footer">
+            جميع الحقوق محفوظة &copy; مصطفى للأواني
+        </div>
+    </div>
+
+</body>
+</html>
