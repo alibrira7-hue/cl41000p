@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محل مصطفى للأواني بالجملة</title>
-    <!-- تضمين الخط العربي الفاخر Cairo -->
+    <title>بيكتا شوب</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <!-- تضمين مكتبة الأيقونات Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --primary-gold: #c5a059;
@@ -40,14 +39,13 @@
             padding: 20px;
         }
 
-        /* خلفية بصرية مدمجة ومتناسقة مع صور أواني راقية ومحتشمة بطابع جمالي مريح */
         .background-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)), 
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.95)),
                         url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             z-index: -1;
             filter: blur(4px);
@@ -70,7 +68,6 @@
             text-align: center;
         }
 
-        /* قسم الهوية البصرية والشعار */
         .profile-header {
             display: flex;
             flex-direction: column;
@@ -79,21 +76,23 @@
             width: 100%;
         }
 
+        /* شعار بيكتا شوب */
         .logo-container {
             position: relative;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--primary-gold);
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+            width: 300px;
+            max-width: 100%;
+            height: 85px;
+            overflow: visible;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
             margin-bottom: 15px;
         }
 
         .logo-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         h1 {
@@ -119,7 +118,6 @@
             margin-bottom: 5px;
         }
 
-        /* شريط الصور المصغرة المدمج لإبراز جودة الأواني وراحة العين */
         .showcase-strip {
             display: flex;
             gap: 10px;
@@ -148,7 +146,6 @@
             object-fit: cover;
         }
 
-        /* روابط التواصل والأزرار التفاعلية الواضحة */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -190,15 +187,29 @@
             font-size: 1.3rem;
         }
 
-        /* تخصيص ألوان الأيقونات والأزرار البارزة لراحة وسهولة الاستخدام */
-        .whatsapp-btn i { color: var(--accent-green); }
-        .whatsapp-btn:hover { border-color: var(--accent-green); }
+        .whatsapp-btn i {
+            color: var(--accent-green);
+        }
 
-        .insta-btn i { color: var(--accent-insta); }
-        .insta-btn:hover { border-color: var(--accent-insta); }
+        .whatsapp-btn:hover {
+            border-color: var(--accent-green);
+        }
 
-        .map-btn i { color: var(--accent-map); }
-        .map-btn:hover { border-color: var(--accent-map); }
+        .insta-btn i {
+            color: var(--accent-insta);
+        }
+
+        .insta-btn:hover {
+            border-color: var(--accent-insta);
+        }
+
+        .map-btn i {
+            color: var(--accent-map);
+        }
+
+        .map-btn:hover {
+            border-color: var(--accent-map);
+        }
 
         .link-btn .arrow-icon {
             font-size: 0.9rem;
@@ -211,7 +222,6 @@
             color: var(--text-light);
         }
 
-        /* تذييل الصفحة */
         .footer {
             margin-top: 30px;
             font-size: 0.75rem;
@@ -220,70 +230,95 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- الخلفية البصرية المدمجة -->
     <div class="background-overlay"></div>
 
     <div class="container">
-        <!-- معلومات المحل والشعار -->
+
+        <!-- الشعار والاسم -->
         <div class="profile-header">
+
             <div class="logo-container">
-                <!-- صورة حقيقية راقية ومحتشمة تعبر عن جودة الأواني المنزلية الفاخرة -->
-                <img src="https://images.unsplash.com/photo-1590736969955-71cc9480175f?auto=format&fit=crop&w=300&q=80" alt="محل مصطفى للأواني">
+                <img src="logo.png" alt="بيكتا شوب">
             </div>
-            <h1>محل مصطفى للأواني</h1>
-            <div class="subtitle">متخصصون في بيع الأواني بالجملة</div>
-            <p class="bio">أجود أنواع الأواني المنزلية وتجهيزات المطاعم والمحلات بأفضل الأسعار جملة وتفصيلًا.</p>
+
+            <h1>بيكتا شوب</h1>
+
+            <div class="subtitle">
+                متخصصون في بيع الأواني بالجملة
+            </div>
+
+            <p class="bio">
+                أجود أنواع الأواني المنزلية وتجهيزات المطاعم والمحلات بأفضل الأسعار جملة وتفصيلًا.
+            </p>
+
         </div>
 
-        <!-- شريط صور مصغرة يدمج جمالية التصميم ويعرض جزءاً من المنتجات لراحة العين -->
+        <!-- صور المنتجات -->
         <div class="showcase-strip">
+
             <div class="showcase-thumb">
-                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=200&q=80" alt="أواني منزليّة فخمة">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=200&q=80" alt="أواني منزلية فخمة">
             </div>
+
             <div class="showcase-thumb">
                 <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=200&q=80" alt="طقم ضيافة راقي">
             </div>
+
             <div class="showcase-thumb">
                 <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=200&q=80" alt="مستلزمات مطابخ">
             </div>
+
         </div>
 
-        <!-- الروابط الأساسية (واتساب، إنستغرام، الموقع الجغرافي) بحجم وأزرار واضحة وقابلة للضغط بسلاسة -->
+        <!-- روابط التواصل -->
         <div class="links-container">
-            <!-- زر الواتساب الرئيسي -->
+
+            <!-- واتساب -->
             <a href="https://wa.me/212668461366" target="_blank" class="link-btn whatsapp-btn">
+
                 <div class="icon-text">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>تواصل عبر الواتساب</span>
                 </div>
+
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
+
             </a>
 
-            <!-- زر إنستغرام -->
+            <!-- إنستغرام -->
             <a href="https://www.instagram.com/byktamusstafa?srtk=a2U1M2VxOTF5emNy" target="_blank" class="link-btn insta-btn">
+
                 <div class="icon-text">
                     <i class="fa-brands fa-instagram"></i>
                     <span>صفحة إنستغرام</span>
                 </div>
+
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
+
             </a>
 
-            <!-- زر خريطة الموقع -->
+            <!-- الموقع الجغرافي -->
             <a href="https://goo.gl/maps/J54SQEi3ZmichQQu6?g_st=aw" target="_blank" class="link-btn map-btn">
+
                 <div class="icon-text">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>موقع المحل على الخريطة</span>
                 </div>
+
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
+
             </a>
+
         </div>
 
         <!-- التذييل -->
         <div class="footer">
-            جميع الحقوق محفوظة &copy; مصطفى للأواني
+            جميع الحقوق محفوظة &copy; بيكتا شوب
         </div>
+
     </div>
 
 </body>
